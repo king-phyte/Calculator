@@ -9,7 +9,7 @@ Twitter: @king_phyte
 A basic calculator with basic view
 
 --V2.0--
-+ Employed OOP to make facilitate code maintenance and reusability
++ Employed OOP to facilitate code maintenance and reusability
 - Removed sym button (including all related buttons)
 
 --V2.1--
