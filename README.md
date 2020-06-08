@@ -14,6 +14,9 @@ A basic calculator with basic view
 
 --V2.1--
 + Added basic scientific functionality
-+ Major improvements and bug fixes
++ Supports both standard and basic scientific calculations
++ Some symbols posses their natual feel now
++ GUI Improvements 
++ Bug fixes
 
 
