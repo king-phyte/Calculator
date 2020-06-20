@@ -176,6 +176,23 @@ class Calculator:
             self.buttonsFrame, text="=", command=equalToHandler)
         self.equalTo.grid(row=5, column=3, ipadx=10, ipady=7)
 
+        standardKeys = ["/", "*", "e"]
+        uiKeys = ["÷", "×", "exp("]
+
+        def fun(event):
+            if event.char in standardKeys:
+                i = standardKeys.index(event.char)
+                ins = uiKeys[i]
+                deleteHandler()
+                self.textField.insert("end", ins)
+            elif event.keycode == 13:
+                equalToHandler()
+                self.textField.delete("2.end - 1 chars")
+
+            self.textField.focus()
+
+        self.root.bind("<KeyPress>", fun)
+
     def scientificButtons(self):
         """
         Provides basic scientific capabilities
