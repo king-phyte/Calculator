@@ -1,12 +1,12 @@
 # Calculator
-A GUI calculator using Python's tkinter
++ A GUI calculator using Python's tkinter
 
-Developer: King Phyte
-Email: kofiasante1400@gmail.com
-Twitter: @king_phyte
++ Developer: King Phyte
++ Email: kofiasante1400@gmail.com
++ Twitter: @king_phyte
 
 --V1.0--
-A basic calculator with basic view
++ A basic calculator with basic view
 
 --V2.0--
 + Employed OOP to facilitate code maintenance and reusability
@@ -20,3 +20,6 @@ A basic calculator with basic view
 + Bug fixes
 
 
+--V2.2--
++ Added event handlers
++ Improved UI for symbols
