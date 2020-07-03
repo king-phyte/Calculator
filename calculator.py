@@ -14,6 +14,7 @@ class Calculator:
         self.root.title("Calculator")
         self.layout()
         self.standardButtons()
+        self.root.resizable(0, 0)
         self.root.mainloop()
 
     def layout(self):
@@ -80,63 +81,63 @@ class Calculator:
         self.delete.grid(row=1, column=3, ipadx=10, ipady=7)
 
         self.seven = ttk.Button(
-            self.buttonsFrame, text="7", command=lambda: self.textField.insert("end", "7"))
+            self.buttonsFrame, text="7", command=lambda: self.textField.insert("end", "7") or self.textField.focus())
         self.seven.grid(row=2, column=0, ipadx=10, ipady=7)
 
         self.eight = ttk.Button(
-            self.buttonsFrame, text="8", command=lambda: self.textField.insert("end", "8"))
+            self.buttonsFrame, text="8", command=lambda: self.textField.insert("end", "8") or self.textField.focus())
         self.eight.grid(row=2, column=1, ipadx=10, ipady=7)
 
         self.nine = ttk.Button(self.buttonsFrame, text="9",
-                               command=lambda: self.textField.insert("end", "9"))
+                               command=lambda: self.textField.insert("end", "9") or self.textField.focus())
         self.nine.grid(row=2, column=2, ipadx=10, ipady=7)
 
         self.division = ttk.Button(
-            self.buttonsFrame, text="÷", command=lambda: self.textField.insert("end", "÷"))
+            self.buttonsFrame, text="÷", command=lambda: self.textField.insert("end", "÷") or self.textField.focus())
         self.division.grid(row=2, column=3, ipadx=10, ipady=7)
 
         self.four = ttk.Button(self.buttonsFrame, text="4",
-                               command=lambda: self.textField.insert("end", "4"))
+                               command=lambda: self.textField.insert("end", "4") or self.textField.focus())
         self.four.grid(row=3, column=0, ipadx=10, ipady=7)
 
         self.five = ttk.Button(self.buttonsFrame, text="5",
-                               command=lambda: self.textField.insert("end", "5"))
+                               command=lambda: self.textField.insert("end", "5") or self.textField.focus())
         self.five.grid(row=3, column=1, ipadx=10, ipady=7)
 
         self.six = ttk.Button(self.buttonsFrame, text="6",
-                              command=lambda: self.textField.insert("end", "6"))
+                              command=lambda: self.textField.insert("end", "6") or self.textField.focus())
         self.six.grid(row=3, column=2, ipadx=10, ipady=7)
 
         self.multiplication = ttk.Button(
-            self.buttonsFrame, text="×", command=lambda: self.textField.insert("end", "×"))
+            self.buttonsFrame, text="×", command=lambda: self.textField.insert("end", "×") or self.textField.focus())
         self.multiplication.grid(row=3, column=3, ipadx=10, ipady=7)
 
         self.one = ttk.Button(self.buttonsFrame, text="1",
-                              command=lambda: self.textField.insert("end", "1"))
+                              command=lambda: self.textField.insert("end", "1") or self.textField.focus())
         self.one.grid(row=4, column=0, ipadx=10, ipady=7)
 
         self.two = ttk.Button(self.buttonsFrame, text="2",
-                              command=lambda: self.textField.insert("end", "2"))
+                              command=lambda: self.textField.insert("end", "2") or self.textField.focus())
         self.two.grid(row=4, column=1, ipadx=10, ipady=7)
 
         self.three = ttk.Button(
-            self.buttonsFrame, text="3", command=lambda: self.textField.insert("end", "3"))
+            self.buttonsFrame, text="3", command=lambda: self.textField.insert("end", "3") or self.textField.focus())
         self.three.grid(row=4, column=2, ipadx=10, ipady=7)
 
         self.subtraction = ttk.Button(
-            self.buttonsFrame, text="-", command=lambda: self.textField.insert("end", "-"))
+            self.buttonsFrame, text="-", command=lambda: self.textField.insert("end", "-") or self.textField.focus())
         self.subtraction.grid(row=4, column=3, ipadx=10, ipady=7)
 
         self.point = ttk.Button(
-            self.buttonsFrame, text=".", command=lambda: self.textField.insert("end", "."))
+            self.buttonsFrame, text=".", command=lambda: self.textField.insert("end", ".") or self.textField.focus())
         self.point.grid(row=5, column=0, ipadx=10, ipady=7)
 
         self.zero = ttk.Button(self.buttonsFrame, text="0",
-                               command=lambda: self.textField.insert("end", "0"))
+                               command=lambda: self.textField.insert("end", "0") or self.textField.focus())
         self.zero.grid(row=5, column=1, ipadx=10, ipady=7)
 
         self.squareroot = ttk.Button(
-            self.buttonsFrame, text="√", command=lambda: self.textField.insert("end", "√("))
+            self.buttonsFrame, text="√", command=lambda: self.textField.insert("end", "√(") or self.textField.focus())
         self.squareroot.grid(row=5, column=2, ipadx=10, ipady=7)
 
         def equalToHandler():
@@ -203,63 +204,63 @@ class Calculator:
             row=1, column=0, ipadx=10, ipady=7)
 
         self.sin_ = ttk.Button(self.buttonsFrame, text="sin",
-                               command=lambda: self.textField.insert("end", "sin("))
+                               command=lambda: self.textField.insert("end", "sin(") or self.textField.focus())
         self.sin_.grid(row=2, column=0, ipadx=10, ipady=7)
 
         self.cos_ = ttk.Button(self.buttonsFrame, text="cos",
-                               command=lambda: self.textField.insert("end", "cos("))
+                               command=lambda: self.textField.insert("end", "cos(") or self.textField.focus())
         self.cos_.grid(row=2, column=1, ipadx=10, ipady=7)
 
         self.tan_ = ttk.Button(self.buttonsFrame, text="tan",
-                               command=lambda: self.textField.insert("end", "tan("))
+                               command=lambda: self.textField.insert("end", "tan(") or self.textField.focus())
         self.tan_.grid(row=2, column=2, ipadx=10, ipady=7)
 
         self.log_ = ttk.Button(self.buttonsFrame, text="log",
-                               command=lambda: self.textField.insert("end", "log("))
+                               command=lambda: self.textField.insert("end", "log(") or self.textField.focus())
         self.log_.grid(row=2, column=3, ipadx=10, ipady=7)
 
         self.exponent = ttk.Button(
-            self.buttonsFrame, text="^", command=lambda: self.textField.insert("end", "^"))
+            self.buttonsFrame, text="^", command=lambda: self.textField.insert("end", "^") or self.textField.focus())
         self.exponent.grid(row=3, column=0, ipadx=10, ipady=7)
 
         self.cubicroot = ttk.Button(
-            self.buttonsFrame, text="∛", command=lambda: self.textField.insert("end", "∛("))
+            self.buttonsFrame, text="∛", command=lambda: self.textField.insert("end", "∛(") or self.textField.focus())
         self.cubicroot.grid(row=3, column=1, ipadx=10, ipady=7)
 
         self.oneoverx = ttk.Button(
-            self.buttonsFrame, text="1/x", command=lambda: self.textField.insert("end", "1/("))
+            self.buttonsFrame, text="1/x", command=lambda: self.textField.insert("end", "1/(") or self.textField.focus())
         self.oneoverx.grid(row=3, column=2, ipadx=10, ipady=7)
 
         self.naturallog = ttk.Button(
-            self.buttonsFrame, text="ln", command=lambda: self.textField.insert("end", "ln("))
+            self.buttonsFrame, text="ln", command=lambda: self.textField.insert("end", "ln(") or self.textField.focus())
         self.naturallog.grid(row=3, column=3, ipadx=10, ipady=7)
 
         self.modulo = ttk.Button(
-            self.buttonsFrame, text="mod", command=lambda: self.textField.insert("end", "mod"))
+            self.buttonsFrame, text="mod", command=lambda: self.textField.insert("end", "mod") or self.textField.focus())
         self.modulo.grid(row=4, column=0, ipadx=10, ipady=7)
 
         self.factorial_ = ttk.Button(self.buttonsFrame, text="factorial",
-                                     command=lambda: self.textField.insert("end", "factorial("))
+                                     command=lambda: self.textField.insert("end", "factorial(") or self.textField.focus())
         self.factorial_.grid(row=4, column=1, ipadx=10, ipady=7)
 
         self.eulersnumber = ttk.Button(
-            self.buttonsFrame, text="e", command=lambda: self.textField.insert("end", "exp("))
+            self.buttonsFrame, text="e", command=lambda: self.textField.insert("end", "exp(") or self.textField.focus())
         self.eulersnumber.grid(row=4, column=2, ipadx=10, ipady=7)
 
         self.tenexponentx = ttk.Button(
-            self.buttonsFrame, text="10^x", command=lambda: self.textField.insert("end", "10^("))
+            self.buttonsFrame, text="10^x", command=lambda: self.textField.insert("end", "10^(") or self.textField.focus())
         self.tenexponentx.grid(row=4, column=3, ipadx=10, ipady=7)
 
         self.abosultevalue = ttk.Button(
-            self.buttonsFrame, text="| x |", command=lambda: self.textField.insert("end", "abs("))
+            self.buttonsFrame, text="| x |", command=lambda: self.textField.insert("end", "abs(") or self.textField.focus())
         self.abosultevalue.grid(row=5, column=0, ipadx=10, ipady=7)
 
         self.openbracket = ttk.Button(
-            self.buttonsFrame, text="(", command=lambda: self.textField.insert("end", "("))
+            self.buttonsFrame, text="(", command=lambda: self.textField.insert("end", "(") or self.textField.focus())
         self.openbracket.grid(row=5, column=1, ipadx=10, ipady=7)
 
         self.closebracket = ttk.Button(
-            self.buttonsFrame, text=")", command=lambda: self.textField.insert("end", ")"))
+            self.buttonsFrame, text=")", command=lambda: self.textField.insert("end", ")") or self.textField.focus())
         self.closebracket.grid(row=5, column=2, ipadx=10, ipady=7)
 
 
